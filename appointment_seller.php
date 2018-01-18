@@ -277,9 +277,9 @@ echo"<a class='navbar-brand' href='#'>PTM".$ptm_year." Survey</a>";
 
 					
 						
-						<div class="panel-body">
-							<div class="panel-body">
-								<div class="table-responsive1">
+						<div class="panel-body" style="width:100%;">
+							<div class="panel-body" style="width:100%;">
+								<div class="table-responsive1" style="width:100%;">
 <?php
 
 echo "<table class='table table-bordered table-hover table-striped tablesorter' style='width:100%;'>";
