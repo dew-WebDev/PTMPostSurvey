@@ -201,173 +201,95 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
 <?php
 
   $SellerID = $_GET['SellerID'];
-  $RatedBuyerID = $_GET['RatedBuyerID'];
-    
 
-              $RatedBuyID1 = mysql_query("select * from SellerAnswer1 where RatedBuyerID='".$_GET['RatedBuyerID']."' LIMIT 1");
-              $row = mysql_fetch_assoc($RatedBuyID1);
-              
-              $RatedBuyerIDAnswer = $row['RatedBuyerID'];
+
+              $result = mysql_query("SELECT MAX(ID) AS max_page FROM SellerAnswerAll1 where SellerID='".$SellerID."'");
+                  $row = mysql_fetch_array($result);
               
 
-      if ($RatedBuyerIDAnswer == $_GET['RatedBuyerID'])
-      {
+              $Checkform = mysql_query("select * from SellerAnswerAll1 where SellerID='".$SellerID."' and ID='".$row["max_page"]."'");
+              $row = mysql_fetch_assoc($Checkform);
+              $CheckformAnswer = $row['BuyerID'];
+              
+              
+              if (($CheckformAnswer != ""))
+                {
          
         
-        $result = mysql_query("select Question from SellerQuestion");
-        $storeArray = Array();
-          while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-                $storeArray[] =  $row['Question'];  
-          }
+                  $result = mysql_query("select Question from SellerQuestionAll");
+                  $storeArray = Array();
+                    while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                        $storeArray[] =  $row['Question'];  
+                    }
 
-        $seller_rating = mysql_query("select * from SellerRating");
-        $seller_rating_row = mysql_fetch_array($seller_rating) or die(mysql_error());
-        $Title = $seller_rating_row['Title'];
-        $Round = $seller_rating_row['Round'];
+                    $seller_rating = mysql_query("select * from SellerRatingAll");
+                    $seller_rating_row = mysql_fetch_array($seller_rating) or die(mysql_error());
+                    $Title = $seller_rating_row['Title'];
+                    $Round = $seller_rating_row['Round'];
 
-        $result = mysql_query("SELECT MAX(ID) AS max_page FROM SellerAnswer1 where RatedBuyerID='".$RatedBuyerID."'");
-        $row = mysql_fetch_array($result);
-        
-        
+                          $result1 = mysql_query("SELECT MAX(ID) AS max_page FROM SellerAnswerAll1 where SellerID='".$SellerID."'");
+                          $row = mysql_fetch_array($result1);
 
-        $answer_seller = mysql_query("select * from SellerAnswer1 where RatedBuyerID='".$RatedBuyerID."' and ID='".$row["max_page"]."'");
-        $answer_seller_row = mysql_fetch_array($answer_seller) or die(mysql_error());
-        $IDanswer_seller = $answer_seller_row['ID'];
-        $answer1 = $answer_seller_row['Ans1'];
-        $answer2 = $answer_seller_row['Ans2'];
-        $answer3 = $answer_seller_row['Ans3'];
-        $answer4 = $answer_seller_row['Ans4'];
-        $answer5 = $answer_seller_row['Ans5'];
-        $answer6 = $answer_seller_row['Ans6'];
-        $answer7 = $answer_seller_row['Ans7'];
-        $answer8 = $answer_seller_row['Ans8'];
-        $answer9 = $answer_seller_row['Ans9'];
-        $answer10 = $answer_seller_row['Ans10'];
-        $answer11 = $answer_seller_row['Ans11'];
-        $answer12 = $answer_seller_row['Ans12'];
-        $answer13 = $answer_seller_row['Ans13'];
-        $answer14 = $answer_seller_row['Ans14'];
-        $answer15 = $answer_seller_row['Ans15'];
-        $answer16 = $answer_seller_row['Ans16'];
-        $answer17 = $answer_seller_row['Ans17'];
-        $answer18 = $answer_seller_row['Ans18'];
-        $answer19 = $answer_seller_row['Ans19'];
-        $answer20 = $answer_seller_row['Ans20'];
-        $answer21 = $answer_seller_row['Ans21'];
+                      $answer_seller = mysql_query("select * from SellerAnswerAll1 where SellerID='".$SellerID."' and ID='".$row["max_page"]."'");
+                          $answer_seller_row = mysql_fetch_array($answer_seller) or die(mysql_error());
+                            $IDanswer_seller = $answer_seller_row['ID'];
+                            $answer1 = $answer_seller_row['Ans1'];
+                            $answer2 = $answer_seller_row['Ans2'];
+                            $answer3 = $answer_seller_row['Ans3'];
+                            $answer4 = $answer_seller_row['Ans4'];
+                            $answer5 = $answer_seller_row['Ans5'];
+                            $answer6 = $answer_seller_row['Ans6'];
+                            $answer7 = $answer_seller_row['Ans7'];
+                            $answer8 = $answer_seller_row['Ans8'];
+                            $answer9 = $answer_seller_row['Ans9'];
+                            $answer10 = $answer_seller_row['Ans10'];
+                            $answer11 = $answer_seller_row['Ans11'];
+                            $answer12 = $answer_seller_row['Ans12'];
 
 
         
       ?>
 
 
-  <form class="jotform-form" action="update_seller_answer1.php" method="post" name="form_73512175872459" id="73512175872459" accept-charset="utf-8">
-  <input type="hidden" name="formID" value="73512175872459" />
+  <form class="jotform-form" action="insert_seller_answer_all1.php" method="post" name="form_80102170872447" id="80102170872447" accept-charset="utf-8">
+  <input type="hidden" name="formID" value="80102170872447" />
   <input type="hidden" name="SellerID" value="<?php echo"$SellerID" ?>">
-  <input type="hidden" name="RatedBuyerID" value="<?php echo"$RatedBuyerID" ?>">
-  <input type="hidden" name="IDAnswer" value="<?php echo"$IDanswer_seller" ?>">
   <div class="form-all">
     <ul class="form-section page-section">
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-           <h1>90 Days Post Survey</h1>
-           
-            <h2><?php echo "$Title"; ?></h2>
-            <p><?php echo "Buyer ID: ".$RatedBuyerID.""; ?></p>
-
+            <h3>90 Days Post Survey</h3>
+            <h4><?php echo "$Title"; ?></h4>
           </div>
         </div>
       </li>
       <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
         <div id="cid_9" class="form-input-wide">
           <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[0]; ?> <span class="form-required">
-            *
-          </span> </strong></p>
-          </div>
-        </div>
-        </li>
-      <li class="form-line jf-required" data-type="control_radio" id="id_17">
-        <div id="cid_17" class="form-input-wide jf-required">
-          <div class="form-multiple-column" data-columncount="3" data-component="radio">
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_17_0" name="q17_1To" value="Extremely" <?php if($answer1!= "") echo "checked"; ?> required="" />
-              <label id="label_input_17_0" for="input_17_0"> <?php echo $storeArray[1]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_17_1" name="q17_1To" value="Moderate" <?php if($answer2!= "") echo "checked"; ?> required="" />
-              <label id="label_input_17_1" for="input_17_1"> <?php echo $storeArray[2]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_17_2" name="q17_1To" value="Slightly" <?php if($answer3!= "") echo "checked"; ?> required="" />
-              <label id="label_input_17_2" for="input_17_2"> <?php echo $storeArray[3]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
-        <div id="cid_9" class="form-input-wide">
-          <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[4]; ?> <span class="form-required">
-            *
-          </span> </strong></p>
-          </div>
-        </div>
-        </li>
-      <li class="form-line jf-required" data-type="control_radio" id="id_18">
-        <div id="cid_18" class="form-input-wide jf-required">
-          <div class="form-multiple-column" data-columncount="3" data-component="radio">
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_18_0" name="q18_typeA" value="Yes" <?php if($answer4!= "") echo "checked"; ?> required="" />
-              <label id="label_input_18_0" for="input_18_0"> <?php echo $storeArray[5]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_18_1" name="q18_typeA" value="No" <?php if($answer5!= "") echo "checked"; ?> required="" />
-              <label id="label_input_18_1" for="input_18_1"> <?php echo $storeArray[6]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_18_2" name="q18_typeA" value="May be" <?php if($answer6!= "") echo "checked"; ?> required="" />
-              <label id="label_input_18_2" for="input_18_2"> <?php echo $storeArray[7]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
-        <div id="cid_9" class="form-input-wide">
-          <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[8]; ?> <span class="form-required">
-            *
-          </span></strong></p>
+            <p><strong> <?php echo $storeArray[0]; ?></strong></p>
           </div>
         </div>
       </li>
       <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_radio" id="id_1">
-        
+        <label class="form-label form-label-top" id="label_1" for="input_1">
+          <span class="form-required">
+            *
+          </span>
+        </label>
         <div id="cid_1" class="form-input-wide jf-required">
           <div class="form-single-column" data-component="radio">
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_0" name="q1_input1" value="Expected To Generated" <?php if($answer7!= "") echo "checked"; ?> required="" />
-              <label id="label_input_1_0" for="input_1_0"> <?php echo $storeArray[9]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_1_0" name="q1_input1" value="Expected To Generated" required="" />
+              <label id="label_input_1_0" for="input_1_0">  <?php echo $storeArray[1]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_1" name="q1_input1" value="Actual Generated" <?php if($answer8!= "") echo "checked"; ?> required="" />
-              <label id="label_input_1_1" for="input_1_1"> <?php echo $storeArray[10]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_1_1" name="q1_input1" value="Actual Generated" required="" />
+              <label id="label_input_1_1" for="input_1_1">  <?php echo $storeArray[2]; ?> </label>
             </span>
           </div>
         </div>
@@ -380,7 +302,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
           </span>
         </label>
         <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_expectedTo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="<?php echo "$answer7"; ?>" placeholder=" " data-component="textbox" required="" />
+          <input type="text" id="input_3" name="q3_expectedTo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
         </div>
       </li>
       <li class="form-line form-line-column form-col-3 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_4">
@@ -391,128 +313,101 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
           </span>
         </label>
         <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_nameOf" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="<?php echo "$answer8"; ?>" placeholder=" " data-component="textbox" required="" />
+          <input type="text" id="input_4" name="q4_nameOf" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
-        <div id="cid_9" class="form-input-wide">
-          <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[11]; ?> <span class="form-required">
-            *
-          </span></strong></p>
+      <li class="form-line" data-type="control_text" id="id_20">
+        <div id="cid_20" class="form-input-wide">
+          <div id="text_20" class="form-html" data-component="text">
+            <p><strong> <?php echo $storeArray[3]; ?></strong></p>
           </div>
         </div>
-       </li>
+      </li>
       <li class="form-line jf-required" data-type="control_radio" id="id_19">
+        <label class="form-label form-label-top" id="label_19" for="input_19">
+          <span class="form-required">
+            *
+          </span>
+        </label>
         <div id="cid_19" class="form-input-wide jf-required">
           <div class="form-multiple-column" data-columncount="4" data-component="radio">
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_typeA19" value="Definitely “Yes”" <?php if($answer9!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_0" for="input_19_0"> <?php echo $storeArray[12]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_2Does" value="Definitely “Yes”" required="" />
+              <label id="label_input_19_0" for="input_19_0">  <?php echo $storeArray[4]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_typeA19" value="Probably “Yes”" <?php if($answer10!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_1" for="input_19_1"> <?php echo $storeArray[13]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_2Does" value="Probably “Yes”" required="" />
+              <label id="label_input_19_1" for="input_19_1">  <?php echo $storeArray[5]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_2" name="q19_typeA19" value="Probably “No”" <?php if($answer11!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_2" for="input_19_2"> <?php echo $storeArray[14]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_2" name="q19_2Does" value="Probably “No”" required="" />
+              <label id="label_input_19_2" for="input_19_2">  <?php echo $storeArray[6]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_3" name="q19_typeA19" value="Definitely “No”" <?php if($answer12!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_3" for="input_19_3"> <?php echo $storeArray[15]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_3" name="q19_2Does" value="Definitely “No”" required="" />
+              <label id="label_input_19_3" for="input_19_3">  <?php echo $storeArray[7]; ?> </label>
             </span>
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
-        <div id="cid_9" class="form-input-wide">
-          <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[16]; ?> <span class="form-required">
-            *
-          </span></strong></p>
+      <li class="form-line" data-type="control_text" id="id_21">
+        <div id="cid_21" class="form-input-wide">
+          <div id="text_21" class="form-html" data-component="text">
+            <p><strong> <?php echo $storeArray[8]; ?></strong></p>
           </div>
         </div>
-        </li>
+      </li>
       <li class="form-line jf-required" data-type="control_radio" id="id_12">
+        <label class="form-label form-label-top" id="label_12" for="input_12">
+          <span class="form-required">
+            *
+          </span>
+        </label>
         <div id="cid_12" class="form-input-wide jf-required">
           <div class="form-single-column" data-component="radio">
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_3Please" value="Under US$50,000" <?php if($answer13!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[17]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_input12" value="Under US$50,000" required="" />
+              <label id="label_input_12_0" for="input_12_0">  <?php echo $storeArray[9]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_3Please" value="Between US$50,001- US$250,000" <?php if($answer14!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[18]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_input12" value="Between US$50,001- US$250,000" required="" />
+              <label id="label_input_12_1" for="input_12_1">  <?php echo $storeArray[10]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_3Please" value="Between US$250,001- US$500,000" <?php if($answer15!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[19]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_input12" value="Between US$250,001- US$500,000" required="" />
+              <label id="label_input_12_2" for="input_12_2">  <?php echo $storeArray[11]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_3Please" value="Between US$500,001 - US$ 750,000" <?php if($answer16!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[20]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_input12" value="Between US$500,001 - US$ 750,000" required="" />
+              <label id="label_input_12_3" for="input_12_3">  <?php echo $storeArray[12]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_3Please" value="Between US$750,001 US$1,000,000" <?php if($answer17!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[21]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_input12" value="Between US$750,001 US$1,000,000" required="" />
+              <label id="label_input_12_4" for="input_12_4">  <?php echo $storeArray[13]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_3Please" value="Above USD$1,000,000" <?php if($answer18!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[22]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_text" id="id_9">
-       <div id="cid_9" class="form-input-wide">
-          <div id="text_9" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[23]; ?> <span class="form-required">
-            *
-          </span></strong></p>
-          </div>
-        </div>
-        </li>
-      <li class="form-line" data-type="control_radio" id="id_20">
-        <div id="cid_20" class="form-input-wide">
-          <div class="form-multiple-column" data-columncount="3" data-component="radio">
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_20_0" name="q20_typeA20" value="Yes" <?php if($answer19!= "") echo "checked"; ?>  required="" />
-              <label id="label_input_20_0" for="input_20_0"> <?php echo $storeArray[24]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_20_1" name="q20_typeA20" value="No" <?php if($answer20!= "") echo "checked"; ?>  required="" />
-              <label id="label_input_20_1" for="input_20_1"> <?php echo $storeArray[25]; ?> </label>
-            </span>
-            <span class="form-radio-item">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_20_2" name="q20_typeA20" value="May be" <?php if($answer21!= "") echo "checked"; ?>  required="" />
-              <label id="label_input_20_2" for="input_20_2"> <?php echo $storeArray[26]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_input12" value="Above USD$1,000,000" required="" />
+              <label id="label_input_12_5" for="input_12_5">  <?php echo $storeArray[14]; ?> </label>
             </span>
           </div>
         </div>
@@ -520,17 +415,15 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
       <li class="form-line form-line-column form-col-1 form-line-column-clear" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
-              Update
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white" data-component="button">
+              Save
             </button>
             <span>
                
             </span>
-            <button id="input_reset_2" class="cancelbutton" data-component="button" onclick="windowClose();">
-              Cancel
+            <button id="input_reset_2" type="reset" class="form-submit-reset form-submit-button-simple_white" data-component="button">
+              Clear
             </button>
-
-            
           </div>
         </div>
       </li>
@@ -543,9 +436,9 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
   <script>
   JotForm.showJotFormPowered = "new_footer";
   </script>
-  <input type="hidden" id="simple_spc" name="simple_spc" value="73512175872459" />
+  <input type="hidden" id="simple_spc" name="simple_spc" value="80102170872447" />
   <script type="text/javascript">
-  document.getElementById("si" + "mple" + "_spc").value = "73512175872459-73512175872459";
+  document.getElementById("si" + "mple" + "_spc").value = "80102170872447-80102170872447";
   </script>
   
 </form>
@@ -570,7 +463,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
         $Round = $seller_rating_row['Round'];
 
       ?>
- <form class="jotform-form" action="https://submit.jotform.me/submit/80102170872447/" method="post" name="form_80102170872447" id="80102170872447" accept-charset="utf-8">
+ <form class="jotform-form" action="insert_seller_answer_all1.php" method="post" name="form_80102170872447" id="80102170872447" accept-charset="utf-8">
   <input type="hidden" name="formID" value="80102170872447" />
   <input type="hidden" name="SellerID" value="<?php echo"$SellerID" ?>">
   <div class="form-all">
