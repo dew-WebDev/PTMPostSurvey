@@ -59,7 +59,7 @@ else
 require_once("query/connectivity.php");
 
 	
-	$sql="INSERT INTO SellerAnswerAll1 (SellerID, Ans1, Ans2, Ans3, Ans4, Ans5, Ans6, Ans7, Ans8, Ans9, Ans10, Ans11, Ans12, Ans13, Ans14, Ans15, Ans16, Ans17, Ans18, Ans19, Ans20, Ans21, Active) VALUES ('".$_POST['SellerID']."','".$QNo1."','".$QNo2."','".$QNo3."','".$QNo4."','".$QNo5."','".$QNo6."','".$QNo7."','".$QNo8."','".$QNo9."','".$QNo10."','".$QNo11."','".$QNo12."','Y')";
+	$sql="INSERT INTO SellerAnswerAll1 (SellerID, Ans1, Ans2, Ans3, Ans4, Ans5, Ans6, Ans7, Ans8, Ans9, Ans10, Ans11, Ans12, Active) VALUES ('".$_POST['SellerID']."','".$QNo1."','".$QNo2."','".$QNo3."','".$QNo4."','".$QNo5."','".$QNo6."','".$QNo7."','".$QNo8."','".$QNo9."','".$QNo10."','".$QNo11."','".$QNo12."','Y')";
 
 	if(mysql_query($sql) ){
     header("location:post_survey_seller_success.php");

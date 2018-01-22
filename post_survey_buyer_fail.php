@@ -32,7 +32,7 @@ include("header.php");
 			
 			<div id='reg1' style="width:500px;">
 			 <center>
-				<h1 style='color:#32464E'>Your 90 Days Post Survey: Buyer Fail To Submit For Further Information Please Contact Pata Administrators...</h1>
+				<h3 style='color:#32464E'>Your 90 Days Post Survey: Buyer Fail To Submit For Further Information Please Contact Pata Administrators...</h3>
 				<br><br><br>
 				<input type='button' value='Close' style='width:200px;'onclick='windowClose();'/>
 			</center>
