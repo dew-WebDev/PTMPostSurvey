@@ -9,7 +9,7 @@ This is a development directory for our Github PTMPostSurvey repo. We are learni
 ## Link PTMPostSurvey Dew Computer
 [PTMPostSurvey](http://192.168.16.9:8888/PTMPostSurvey/PTMPostSurvey/)
 
-## Link PTMPostSurvey web site (
+## Link PTMPostSurvey web site 
 [RC version](http://ptm/2018/survey)
 
 1. Buyer appointment: appoinment_buyer.php
