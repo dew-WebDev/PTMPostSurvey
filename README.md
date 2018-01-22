@@ -1,14 +1,16 @@
 # PTMPostSurvey Site
 
-This is sample readme file for our Github PTMPostSurvey repo. We are learning Markdow.
+This is a development directory for our Github PTMPostSurvey repo. We are learning Markdow.
 
-* This is meant to be an example
-* Markdown is really fast
-* Pretty cool, right?
+* Database: mart_ptm_2017
+* Sourcecode Origin: PTM 
+* Add questions on appointment pages: Buyer/Seller from Event team requested - 10/01/2018
 
-## Link PTMPostSurvey Example
-[CodeTime](https://codetime.io)
+## Link PTMPostSurvey Dew Computer
+[PTMPostSurvey](http://192.168.16.9:8888/PTMPostSurvey/PTMPostSurvey/)
 
-1. Item one
-2. Item Two
-3. Item Three
+## Link PTMPostSurvey web site (
+[RC version](http://ptm/2018/survey)
+
+1. Buyer appointment: appoinment_buyer.php
+2. Seller appointment: appoinment_seller.php
