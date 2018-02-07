@@ -92,12 +92,14 @@ if(!isset($_SESSION['did']))
   background: #009933;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .btn1:hover {
   background: #006607;
   text-decoration: none;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .btn {
@@ -110,12 +112,14 @@ if(!isset($_SESSION['did']))
   background: #ff9900;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .btn:hover {
   background: #f08605;
   text-decoration: none;
   color: #ffffff;
+  font-weight: bold;
 }
 
 </style>

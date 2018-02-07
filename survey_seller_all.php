@@ -182,9 +182,9 @@ window.close();
     /* Injected CSS Code */
 </style>
 
-<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_white.css?3.3.4190"/>
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_white.css?3.3.4570"/>
 <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.4190" type="text/javascript"></script>
+<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.4570" type="text/javascript"></script>
 <script type="text/javascript">
    JotForm.setConditions([{"action":[{"field":"3","visibility":"Show","id":"action_0_1512376564967","isError":false}],"id":"1422326854655","index":"3","link":"Any","priority":"3","terms":[{"field":"1","operator":"equals","value":"Expected To Generated","id":"term_0_1512376564967","isError":false}],"type":"field"},{"action":[{"field":"4","visibility":"Show","id":"action_0_1512376624814","isError":false}],"id":"1422326874994","index":"5","link":"Any","priority":"5","terms":[{"field":"1","operator":"equals","value":"Actual Generated","id":"term_0_1512376624814","isError":false}],"type":"field"}]);
    JotForm.init(function(){
@@ -414,18 +414,14 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear" data-type="control_button" id="id_2">
+      <li data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white" data-component="button">
               Update
             </button>
-            <span>
-               
-            </span>
-            <button id="input_reset_2" type="reset" class="form-submit-reset form-submit-button-simple_white" data-component="button">
-              Clear
-            </button>
+            
+
           </div>
         </div>
       </li>
@@ -627,19 +623,16 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"input1","qid":"1","text":"","type":
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear" data-type="control_button" id="id_2">
+      <li data-type="control_button" id="id_2" align="center">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white" data-component="button">
               Save
             </button>
-            <span>
-               
-            </span>
-            <button id="input_reset_2" type="reset" class="form-submit-reset form-submit-button-simple_white" data-component="button">
-              Clear
-            </button>
+            
+
           </div>
+          
         </div>
       </li>
       <li style="display:none">

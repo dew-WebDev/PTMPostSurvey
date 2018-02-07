@@ -1287,18 +1287,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear" data-type="control_button" id="id_2">
+      <li data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
               Update
             </button>
-            <span>
-               
-            </span>
-            <button id="input_reset_2" type="reset" class="form-submit-reset" data-component="button">
-              Clear
-            </button>
+            
           </div>
         </div>
       </li>
@@ -1460,18 +1455,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear" data-type="control_button" id="id_2">
+      <li data-type="control_button" id="id_2" align="center">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
             <button id="input_2" type="submit" class="form-submit-button" data-component="button">
               Save
             </button>
-            <span>
-               
-            </span>
-            <button id="input_reset_2" type="reset" class="form-submit-reset" data-component="button">
-              Clear
-            </button>
+            
           </div>
         </div>
       </li>

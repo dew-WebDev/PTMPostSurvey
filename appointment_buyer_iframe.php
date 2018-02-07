@@ -98,14 +98,12 @@ if(!isset($_SESSION['did']))
   background: #009933;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .btn1:hover {
   background: #006607;
   text-decoration: none;
   color: #ffffff;
-  font-weight: bold;
 }
 
 .btn {
@@ -118,14 +116,12 @@ if(!isset($_SESSION['did']))
   background: #ff9900;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .btn:hover {
   background: #f08605;
   text-decoration: none;
   color: #ffffff;
-  font-weight: bold;
 }
 
 </style>
@@ -282,6 +278,8 @@ echo "<a class='navbar-brand' href='#'>PTM".$ptm_year." Survey</a>";
              ?>
 
 						</div>
+
+
 						<?php /*
 						<div class="col-sm-2">
 							<span style="font-size:16px; font-weight:Bold; font-family:Times;float:right; margin-right:50px; margin-top:30px;"><?php echo $bcomid; ?></span>
@@ -294,6 +292,7 @@ echo "<a class='navbar-brand' href='#'>PTM".$ptm_year." Survey</a>";
 							
 						<div class="panel-body">
 							<div class="panel-body">
+							<script type="text/javascript" src="https://form.jotform.me/jsform/80101407872449"></script>
 								<div class="table-responsive1">
 									
 					<?php
