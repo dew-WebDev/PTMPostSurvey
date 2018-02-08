@@ -89,14 +89,14 @@ if(!isset($_SESSION['did']))
   font-family: Arial;
   color: #ffffff;
   font-size: 14px;
-  background: #009933;
+  background: #008000;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .btn1:hover {
-  background: #006607;
+  background: #228B22;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
@@ -109,14 +109,14 @@ if(!isset($_SESSION['did']))
   font-family: Arial;
   color: #ffffff;
   font-size: 14px;
-  background: #ff9900;
+  background: #FF0000;
   padding: 10px 15px 10px 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .btn:hover {
-  background: #f08605;
+  background: #B22222;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
@@ -470,12 +470,12 @@ echo "<thead><tr><th style='width:10%;text-align:center;'>Date&nbsp;<i class='fa
 
               				 if (($RatedBuyerIDAnswer == $CheckRatedBuyID))
       								{
-         								echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#ff9900'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
+         								echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
 									}
 
 							else
 									{
-										echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#009933'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";
+										echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";
 									}
 						}
 
@@ -491,11 +491,11 @@ echo "<thead><tr><th style='width:10%;text-align:center;'>Date&nbsp;<i class='fa
               				 if (($RatedBuyerIDAnswer == $CheckRatedBuyID))
       								{
 
-											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#ff9900'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
+											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
 									}
 							else
 									{
-											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#009933'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";	
+											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";	
 
 									}
 						}
