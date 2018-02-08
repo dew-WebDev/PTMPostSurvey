@@ -88,7 +88,7 @@ if(!isset($_SESSION['did']))
 	color:#000000;
 }
 
-.btn1 {
+.btn {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px;
@@ -101,14 +101,14 @@ if(!isset($_SESSION['did']))
   font-weight: bold;
 }
 
-.btn1:hover {
+.btn:hover {
   background: #228B22;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
 }
 
-.btn {
+.btn1 {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px;
@@ -121,7 +121,7 @@ if(!isset($_SESSION['did']))
   font-weight: bold;
 }
 
-.btn:hover {
+.btn1:hover {
   background: #B22222;
   text-decoration: none;
   color: #ffffff;
