@@ -64,7 +64,7 @@ if(!isset($_SESSION['did']))
 	font-style:normal;
 	height:22px;
 	line-height:22px;
-	width:80px;
+	width:150px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #ffffff;
@@ -83,98 +83,44 @@ if(!isset($_SESSION['did']))
 }
 
 .btn {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
-	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
-	background-color:#f9f9f9;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#008000;
-	font-family:Arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:10px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-}
-.btn:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
-	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
-	background-color:#e9e9e9;
-	color:#008000;
-	text-decoration:none;
-}
-.btn:active {
-	position:relative;
-	top:1px;
-	color:#008000;
-	text-decoration:none;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #008000;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-        
+.btn:hover {
+  background: #228B22;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
 
 .btn1 {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
-	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
-	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
-	background-color:#f9f9f9;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#FF0000;
-	font-family:Arial;
-	font-size:16px;
-	font-weight:bold;
-	padding:10px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-}
-.btn1:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
-	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
-	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
-	background-color:#e9e9e9;
-	color:#FF0000;
-	text-decoration:none;
-}
-.btn1:active {
-	position:relative;
-	top:1px;
-	color:#FF0000;
-	text-decoration:none;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  background: #FF0000;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-        
+.btn1:hover {
+  background: #B22222;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
 
 </style>
 
@@ -306,7 +252,7 @@ echo"<a class='navbar-brand' href='#'>PTM".$ptm_year." Survey</a>";
 
                   ?>
 
-             <a href="#" onclick="OpenWindow()" class="btn">&#9745; General Survey</a>
+             <a href="#" onclick="OpenWindow()" class="btn">&#9745; Update 90 Days Post Survey</a>
 
               <?php 
                 }
@@ -316,7 +262,7 @@ echo"<a class='navbar-brand' href='#'>PTM".$ptm_year." Survey</a>";
                 
               ?>
 
-              <a href="#" onclick="OpenWindow()" class="btn1">&#9745; General Survey</a>
+              <a href="#" onclick="OpenWindow()" class="btn1">&#9745; Add 90 Days Post Survey</a>
                <?php
 
              }
@@ -524,12 +470,12 @@ echo "<thead><tr><th style='width:10%;text-align:center;'>Date&nbsp;<i class='fa
 
               				 if (($RatedBuyerIDAnswer == $CheckRatedBuyID))
       								{
-         								echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr></tbody>";
+         								echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
 									}
 
 							else
 									{
-										echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr></tbody>";
+										echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";
 									}
 						}
 
@@ -545,11 +491,11 @@ echo "<thead><tr><th style='width:10%;text-align:center;'>Date&nbsp;<i class='fa
               				 if (($RatedBuyerIDAnswer == $CheckRatedBuyID))
       								{
 
-											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr></tbody>";
+											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#008000'>&#9734; Update Post Survey</span></a></div></td></tr></tbody>";
 									}
 							else
 									{
-											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr></tbody>";	
+											echo "<tbody><tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_seller.php?SellerID=$scomid&RatedBuyerID=$CheckRatedBuyID' class='classname' target='_blank'><span style='color:#FF0000'>&#9734; Add Post Survey</span></a></div></td></tr></tbody>";	
 
 									}
 						}
