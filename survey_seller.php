@@ -24,6 +24,11 @@ window.close();
 }
 </script>
 <style type="text/css">
+.jotform-form {
+
+    padding: 0px !important;
+
+}
     .cancelbutton,.form-submit-button {
 
     cursor: pointer;
@@ -72,12 +77,12 @@ window.close();
   background: linear-gradient(top, #ebebeb 0%, #fafafa 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#fafafa', GradientType=0 ); /* ie */
 }
-    .form-label-left{
+  .form-label-left{
         width:150px;
     }
     .form-line{
-        padding-top:12px;
-        padding-bottom:12px;
+        padding-top:1px;
+        padding-bottom:1px;
     }
     .form-label-right{
         width:150px;
@@ -90,10 +95,10 @@ window.close();
 
     .form-all{
         margin:0px auto;
-        padding-top:20px;
+        padding-top:0px;
         width:690px;
         color:#555 !important;
-        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         font-size:14px;
     }
     .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
@@ -110,7 +115,7 @@ window.close();
   clear: both;
 }
 .form-all {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .form-all {
   width: 690px;
@@ -123,9 +128,10 @@ window.close();
   white-space: normal;
 }
 .form-label.form-label-auto {
-  display: block;
-  float: none;
+  display: inline-block;
+  float: left;
   text-align: left;
+  width: 150px;
 }
 .form-label-left {
   display: inline-block;
@@ -357,7 +363,6 @@ window.close();
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
-  background-repeat: repeat;
 }
 .supernova {
   background-image: none;
@@ -370,7 +375,6 @@ window.close();
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
-  background-repeat: repeat;
 }
 .form-header-group {
   background-repeat: no-repeat;
@@ -378,11 +382,11 @@ window.close();
   background-position: center top;
 }
 .form-line {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 .form-line {
-  padding: 4px 36px;
+  padding: 0px 36px;
 }
 .form-all .qq-upload-button,
 .form-all .form-submit-button,
@@ -390,7 +394,7 @@ window.close();
 .form-all .form-submit-print {
   font-size: 1em;
   padding: 9px 15px;
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
 }
@@ -398,7 +402,7 @@ window.close();
 .form-all .form-pagebreak-next {
   font-size: 1em;
   padding: 9px 15px;
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
 }
@@ -429,17 +433,6 @@ h2 ~ .form-subHeader {
 }
 .form-line:after {
   clear: both;
-}
-.form-sub-label-container {
-  margin-right: 0;
-  float: left;
-  white-space: nowrap;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.form-sub-label-container .date-separate {
-  visibility: hidden;
 }
 .form-captcha input,
 .form-spinner input {
@@ -532,11 +525,31 @@ h2 ~ .form-subHeader {
   margin-right: 4%;
 }
 [data-type="control_phone"] .form-sub-label-container {
-  width: 65%;
+  width: 62.5%;
+  margin-left: 2.5%;
+  margin-right: 0;
+  float: left;
+  position: relative;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
   width: 32.5%;
   margin-right: 2.5%;
+  margin-left: 0;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] {
+  width: 93%;
+  float: left;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] ~ .form-sub-label {
+  display: inline-block;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child .phone-separate {
+  position: absolute;
+  top: 0;
+  right: -16%;
+  width: 24%;
+  text-align: center;
+  text-indent: -4px;
 }
 [data-type="control_birthdate"] .form-sub-label-container {
   width: 22%;
@@ -549,52 +562,6 @@ h2 ~ .form-subHeader {
   margin-right: 0;
 }
 [data-type="control_birthdate"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
-[data-type="control_time"] .form-sub-label-container {
-  width: 37%;
-  margin-right: 3%;
-}
-[data-type="control_time"] .form-sub-label-container:last-child {
-  width: 20%;
-  margin-right: 0;
-}
-[data-type="control_time"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
-[data-type="control_datetime"] .form-sub-label-container {
-  width: 28%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"] .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container {
-  width: 12%;
-  margin-right: 3%;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .allowTime-container {
-  float: right;
-  width: 51%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container {
-  width: 27%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:first-child {
-  width: 4%;
-  margin-left: 3%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:last-child {
-  width: 27%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-dropdown {
   width: 100%;
 }
 [data-type="control_payment"] .form-sub-label-container {
@@ -627,7 +594,7 @@ h2 ~ .form-subHeader {
   padding: 4px 3px 2px 3px;
 }
 .form-header-group {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .form-section {
   padding: 0px 0px 0px 0px;
@@ -676,57 +643,41 @@ h2 ~ .form-subHeader {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 48%;
+  margin-right: 0;
+  float: left;
 }
 [data-type="control_fullname"] .form-sub-label-container:first-child {
   margin-right: 4%;
 }
 [data-type="control_phone"] .form-sub-label-container {
-  width: 65%;
+  width: 62.5%;
+  margin-left: 2.5%;
+  margin-right: 0;
+  float: left;
+  position: relative;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
   width: 32.5%;
   margin-right: 2.5%;
+  margin-left: 0;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] {
+  width: 93%;
+  float: left;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] ~ .form-sub-label {
+  display: inline-block;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child .phone-separate {
+  position: absolute;
+  top: 0;
+  right: -16%;
+  width: 24%;
+  text-align: center;
+  text-indent: -4px;
 }
 [data-type="control_phone"] .form-sub-label-container .date-separate {
   visibility: hidden;
-}
-[data-type="control_datetime"] .form-sub-label-container {
-  width: 28%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"] .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"] .form-sub-label-container .date-separate {
-  visibility: hidden;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container {
-  width: 12%;
-  margin-right: 3%;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .allowTime-container {
-  float: right;
-  width: 51%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container {
-  width: 27%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:first-child {
-  width: 4%;
-  margin-left: 3%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:last-child {
-  width: 27%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-dropdown {
-  width: 100%;
 }
 .form-matrix-table {
   width: 100%;
@@ -775,19 +726,8 @@ h2 ~ .form-subHeader {
 [data-type="control_birthdate"] .form-sub-label-container .form-dropdown {
   width: 100%;
 }
-[data-type="control_time"] .form-sub-label-container {
-  width: 37%;
-  margin-right: 3%;
-}
-[data-type="control_time"] .form-sub-label-container:last-child {
-  width: 20%;
-  margin-right: 0;
-}
-[data-type="control_time"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
 .form-label {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 li[data-type="control_image"] div {
   text-align: left;
@@ -988,18 +928,25 @@ li[data-type="control_image"] img {
   }
   [data-type=control_phone] .form-sub-label-container {
     width: 65%;
+    margin-right: 0;
+    margin-left: 0;
+    float: left;
   }
   [data-type=control_phone] .form-sub-label-container:first-child {
     width: 31%;
     margin-right: 4%;
   }
-  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container,
-  [data-type=control_datetime] .form-sub-label-container:first-child {
-    width: 27.3%;
-    margin-right: 6%;
+  [data-type=control_datetime] .allowTime-container {
+    width: 100%;
   }
-  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container + .form-sub-label-container {
-    width: 33.3%;
+  [data-type=control_datetime] .form-sub-label-container:first-child {
+    width: 10%!important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container {
+    width: 24%!important;
+    margin-left: 6%;
     margin-right: 0;
   }
   [data-type=control_datetime] span + span + span > span:first-child {
@@ -1007,12 +954,10 @@ li[data-type="control_image"] img {
     width: 100% !important;
   }
   [data-type=control_birthdate] .form-sub-label-container,
-  [data-type=control_datetime] span + span + span > span:first-child + span + span,
   [data-type=control_time] .form-sub-label-container {
     width: 27.3%!important;
     margin-right: 6% !important;
   }
-  [data-type=control_birthdate] .form-sub-label-container:last-child,
   [data-type=control_time] .form-sub-label-container:last-child {
     width: 33.3%!important;
     margin-right: 0 !important;
@@ -1098,6 +1043,53 @@ li[data-type="control_image"] img {
 /* | */
 
 /*__INSPECT_SEPERATOR__*/
+.form-label-left {
+    width : 120px !important;
+}
+
+#id_3, #id_4, #id_5 {
+    padding-left : 0;
+}
+
+.form-description {
+    right : 40px !important;
+    top : 142px;
+}
+
+.form-description-arrow {
+    border-color : transparent transparent #CCC transparent;
+    left : 57px;
+    top : -22px;
+}
+
+.form-description-arrow-small {
+    border-color : transparent transparent #F5F5F5 transparent;
+    left : 60px;
+    top : -13px;
+}
+
+.form-description-content {
+    font-size : 0.9em;
+}
+
+#input_12 {
+    position : absolute;
+    margin-top : -60px;
+    margin-right : 500px;
+}
+
+#input_13 {
+    position : absolute;
+    margin-top : -100px;
+    margin-left : 300px;
+}
+
+.form-radio-item label, .form-checkbox-item label {
+    display : block !important;
+    margin-left : 19px;
+    margin-top : -17px;
+}
+
 
     /* Injected CSS Code */
 </style>
@@ -1174,8 +1166,8 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-            <h1>90 Days Post Survey</h1>
-            <h2><?php echo "$Title"; ?></h2>
+            <h3>90 Days Post Survey</h3>
+            <h4><?php echo "$Title"; ?></h4>
             <p><?php echo "Buyer ID: ".$_GET['RatedBuyerID'].""; ?></p>
           </div>
         </div>
@@ -1332,8 +1324,8 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-            <h1>90 Days Post Survey</h1>
-            <h2><?php echo "$Title"; ?></h2>
+            <h3>90 Days Post Survey</h3>
+            <h4><?php echo "$Title"; ?></h4>
             <p><?php echo "Buyer ID: ".$_GET['RatedBuyerID'].""; ?></p>
           </div>
         </div>

@@ -25,13 +25,17 @@ window.close();
 }
 </script>
 <style type="text/css">
+.jotform-form {
 
+    padding: 0px !important;
+
+}
     .form-label-left{
         width:150px;
     }
     .form-line{
-        padding-top:2px;
-        padding-bottom:2px;
+        padding-top:1px;
+        padding-bottom:1px;
     }
     .form-label-right{
         width:150px;
@@ -47,7 +51,7 @@ window.close();
         padding-top:2px;
         width:690px;
         color:#555 !important;
-        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         font-size:14px;
     }
     .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
@@ -64,7 +68,7 @@ window.close();
   clear: both;
 }
 .form-all {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .form-all {
   width: 690px;
@@ -333,11 +337,11 @@ window.close();
   background-position: center top;
 }
 .form-line {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 .form-line {
-  padding: 12px 36px;
+  padding: 1px 36px;
 }
 .form-all .qq-upload-button,
 .form-all .form-submit-button,
@@ -345,7 +349,7 @@ window.close();
 .form-all .form-submit-print {
   font-size: 1em;
   padding: 9px 15px;
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
 }
@@ -353,13 +357,13 @@ window.close();
 .form-all .form-pagebreak-next {
   font-size: 1em;
   padding: 9px 15px;
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: normal;
 }
 /*
 & when ( @buttonFontType = google ) {
-	@import (css) "@{buttonFontLink}";
+  @import (css) "@{buttonFontLink}";
 }
 */
 h2.form-header {
@@ -384,17 +388,6 @@ h2 ~ .form-subHeader {
 }
 .form-line:after {
   clear: both;
-}
-.form-sub-label-container {
-  margin-right: 0;
-  float: left;
-  white-space: nowrap;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.form-sub-label-container .date-separate {
-  visibility: hidden;
 }
 .form-captcha input,
 .form-spinner input {
@@ -487,11 +480,31 @@ h2 ~ .form-subHeader {
   margin-right: 4%;
 }
 [data-type="control_phone"] .form-sub-label-container {
-  width: 65%;
+  width: 62.5%;
+  margin-left: 2.5%;
+  margin-right: 0;
+  float: left;
+  position: relative;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
   width: 32.5%;
   margin-right: 2.5%;
+  margin-left: 0;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] {
+  width: 93%;
+  float: left;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] ~ .form-sub-label {
+  display: inline-block;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child .phone-separate {
+  position: absolute;
+  top: 0;
+  right: -16%;
+  width: 24%;
+  text-align: center;
+  text-indent: -4px;
 }
 [data-type="control_birthdate"] .form-sub-label-container {
   width: 22%;
@@ -504,52 +517,6 @@ h2 ~ .form-subHeader {
   margin-right: 0;
 }
 [data-type="control_birthdate"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
-[data-type="control_time"] .form-sub-label-container {
-  width: 37%;
-  margin-right: 3%;
-}
-[data-type="control_time"] .form-sub-label-container:last-child {
-  width: 20%;
-  margin-right: 0;
-}
-[data-type="control_time"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
-[data-type="control_datetime"] .form-sub-label-container {
-  width: 28%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"] .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container {
-  width: 12%;
-  margin-right: 3%;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .allowTime-container {
-  float: right;
-  width: 51%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container {
-  width: 27%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:first-child {
-  width: 4%;
-  margin-left: 3%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:last-child {
-  width: 27%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-dropdown {
   width: 100%;
 }
 [data-type="control_payment"] .form-sub-label-container {
@@ -582,7 +549,7 @@ h2 ~ .form-subHeader {
   padding: 4px 3px 2px 3px;
 }
 .form-header-group {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .form-section {
   padding: 0px 0px 0px 0px;
@@ -591,7 +558,7 @@ h2 ~ .form-subHeader {
   margin: 12px 36px 12px 36px;
 }
 .form-header-group {
-  padding: 24px 0px 24px 0px;
+  padding: 0px 0px 0px 0px;
 }
 .form-textbox,
 .form-textarea {
@@ -631,57 +598,41 @@ h2 ~ .form-subHeader {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 48%;
+  margin-right: 0;
+  float: left;
 }
 [data-type="control_fullname"] .form-sub-label-container:first-child {
   margin-right: 4%;
 }
 [data-type="control_phone"] .form-sub-label-container {
-  width: 65%;
+  width: 62.5%;
+  margin-left: 2.5%;
+  margin-right: 0;
+  float: left;
+  position: relative;
 }
 [data-type="control_phone"] .form-sub-label-container:first-child {
   width: 32.5%;
   margin-right: 2.5%;
+  margin-left: 0;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] {
+  width: 93%;
+  float: left;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child [data-component=areaCode] ~ .form-sub-label {
+  display: inline-block;
+}
+[data-type="control_phone"] .form-sub-label-container:first-child .phone-separate {
+  position: absolute;
+  top: 0;
+  right: -16%;
+  width: 24%;
+  text-align: center;
+  text-indent: -4px;
 }
 [data-type="control_phone"] .form-sub-label-container .date-separate {
   visibility: hidden;
-}
-[data-type="control_datetime"] .form-sub-label-container {
-  width: 28%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"] .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"] .form-sub-label-container .date-separate {
-  visibility: hidden;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container {
-  width: 12%;
-  margin-right: 3%;
-}
-[data-type="control_datetime"].allowTime .form-sub-label-container:last-child {
-  width: 4%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .allowTime-container {
-  float: right;
-  width: 51%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container {
-  width: 27%;
-  margin-right: 4%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:first-child {
-  width: 4%;
-  margin-left: 3%;
-}
-[data-type="control_datetime"].allowTime .allowTime-container .form-sub-label-container:last-child {
-  width: 27%;
-  margin-right: 0;
-}
-[data-type="control_datetime"].allowTime .form-dropdown {
-  width: 100%;
 }
 .form-matrix-table {
   width: 100%;
@@ -730,19 +681,8 @@ h2 ~ .form-subHeader {
 [data-type="control_birthdate"] .form-sub-label-container .form-dropdown {
   width: 100%;
 }
-[data-type="control_time"] .form-sub-label-container {
-  width: 37%;
-  margin-right: 3%;
-}
-[data-type="control_time"] .form-sub-label-container:last-child {
-  width: 20%;
-  margin-right: 0;
-}
-[data-type="control_time"] .form-sub-label-container .form-dropdown {
-  width: 100%;
-}
 .form-label {
-  font-family: "Lucida Grande", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 li[data-type="control_image"] div {
   text-align: left;
@@ -943,18 +883,25 @@ li[data-type="control_image"] img {
   }
   [data-type=control_phone] .form-sub-label-container {
     width: 65%;
+    margin-right: 0;
+    margin-left: 0;
+    float: left;
   }
   [data-type=control_phone] .form-sub-label-container:first-child {
     width: 31%;
     margin-right: 4%;
   }
-  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container,
-  [data-type=control_datetime] .form-sub-label-container:first-child {
-    width: 27.3%;
-    margin-right: 6%;
+  [data-type=control_datetime] .allowTime-container {
+    width: 100%;
   }
-  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container + .form-sub-label-container {
-    width: 33.3%;
+  [data-type=control_datetime] .form-sub-label-container:first-child {
+    width: 10%!important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [data-type=control_datetime] .form-sub-label-container + .form-sub-label-container {
+    width: 24%!important;
+    margin-left: 6%;
     margin-right: 0;
   }
   [data-type=control_datetime] span + span + span > span:first-child {
@@ -962,12 +909,10 @@ li[data-type="control_image"] img {
     width: 100% !important;
   }
   [data-type=control_birthdate] .form-sub-label-container,
-  [data-type=control_datetime] span + span + span > span:first-child + span + span,
   [data-type=control_time] .form-sub-label-container {
     width: 27.3%!important;
     margin-right: 6% !important;
   }
-  [data-type=control_birthdate] .form-sub-label-container:last-child,
   [data-type=control_time] .form-sub-label-container:last-child {
     width: 33.3%!important;
     margin-right: 0 !important;
@@ -1103,7 +1048,7 @@ li[data-type="control_image"] img {
 
     /* Injected CSS Code */
 </style>
-
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_white.css?3.3.4570"/>
 <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
 <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.4038" type="text/javascript"></script>
 <script type="text/javascript">
@@ -1184,9 +1129,9 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li class="form-line" data-type="control_text" id="id_17">
         <div id="cid_17" class="form-input-wide">
           <div id="text_17" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[0]; ?></strong><span class="form-required">
+            <strong><?php echo $storeArray[0]; ?></strong><span class="form-required">
             *
-          </span></p> 
+          </span>
           </div>
         </div>
       </li>
@@ -1236,9 +1181,9 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li class="form-line" data-type="control_text" id="id_18">
         <div id="cid_18" class="form-input-wide">
           <div id="text_18" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
+            <strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
             *
-          </span></p>
+          </span>
           </div>
         </div>
       </li>
@@ -1290,8 +1235,8 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
-              Update
+             <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white" data-component="button">
+              Save
             </button>
             
           </div>
@@ -1458,7 +1403,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li data-type="control_button" id="id_2" align="center">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white" data-component="button">
               Save
             </button>
             

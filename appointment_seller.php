@@ -120,14 +120,7 @@ if(!isset($_SESSION['did']))
 	color:#008000;
 	text-decoration:none;
 }
-.btn:active {
-	position:relative;
-	top:1px;
-	color:#008000;
-	text-decoration:none;
-}
 
-        
 
 .btn1 {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -167,14 +160,7 @@ if(!isset($_SESSION['did']))
 	color:#FF0000;
 	text-decoration:none;
 }
-.btn1:active {
-	position:relative;
-	top:1px;
-	color:#FF0000;
-	text-decoration:none;
-}
 
-        
 
 </style>
 
