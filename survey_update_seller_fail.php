@@ -28,7 +28,7 @@ include("header.php");
 			 <center>
 				<h1 style='color:#32464E'>Your Survey Fail To Update For Further Information Please Contact Pata Administrators ...</h1>
 				<br><br><br>
-				<input type='button' value='Home' style='width:200px;'onclick='location.replace("http://192.168.16.9:8888/PTM/survey/appointment_seller.php")'/>
+				<input type='button' value='Home' style='width:200px;'onclick='location.replace("/PTMPostSurvey/PTMPostSurvey/appointment_seller.php")'/>
 			</center>
 			</div>
 <br><br><br><br><br>

@@ -517,11 +517,11 @@ $qry1 ="select
 
 									{
 
-										echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname' target='_blank'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr>";
+										echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr>";
 									}	
 								else
 									{
-										echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname' target='_blank'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr>";
+										echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td style='color:rgb(255,0,0);'>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr>";
 									}
 								
 						}
@@ -535,12 +535,12 @@ $qry1 ="select
 							
 							if ($RatedSellerIDAnswer == $CheckRatedSellID)
 								{
-									echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname' target='_blank'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr>";
+									echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname'><span style='color:#008000'>&#9745; Survey</span></a></div></td></tr>";
 
 								}
 							else
 								{
-									echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname' target='_blank'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr>";
+									echo "<tr><td>".$krows['time_slot_date']."</td><td>".$krows['time_slot_id_from']."</td><td>".$krows['time_slot_id_to']."</td><td>".$descrip."</td><td>".$arequest."<div align='right'><a href='survey_buyer.php?BuyerID=$bcomid&RatedSellerID=$CheckRatedSellID' class='classname'><span style='color:#FF0000'>&#9745; Survey</span></a></div></td></tr>";
 
 								}
 

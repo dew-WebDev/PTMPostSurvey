@@ -28,7 +28,7 @@ include("header.php");
 			 <center>
 				<h1 style='color:#32464E'>Your Survey has been submitted for processing Successfully...</h1>
 				<br><br><br>
-				<input type='button' value='Home' style='width:200px;'onclick='location.replace("http://192.168.16.9:8888/PTM/survey/appointment_buyer.php")'/>
+				<input type='button' value='Home' style='width:200px;'onclick='location.replace("/PTMPostSurvey/PTMPostSurvey/appointment_buyer.php")'/>
 			</center>
 			</div>
 <br><br><br><br><br>

@@ -1238,9 +1238,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
             <span>
                
             </span>
-            <button id="input_reset_2" class="cancelbutton" data-component="button" onclick="windowClose();">
-              Cancel
-            </button>
+             <a href="appointment_buyer.php" title="cancel" class="cancelbutton" style="text-decoration: none; padding:8px 18px;color: #777777;text-shadow:1px 1px 0px #ffffff;">Cancel</a>
           </div>
         </div>
       </li>
@@ -1366,9 +1364,14 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
             <span>
                
             </span>
-            <button id="input_reset_2" class="cancelbutton" data-component="button" onclick="windowClose();">
-              Cancel
-            </button>
+            <script language="javascript" type="text/javascript">
+              function windowClose1() {
+              window.open('','_parent','');
+              window.close();
+                }
+            </script>
+            
+         <a href="appointment_buyer.php" title="cancel" class="cancelbutton" style="text-decoration: none; padding:8px 18px;color: #777777;text-shadow:1px 1px 0px #ffffff;">Cancel</a>
           </div>
         </div>
       </li>
