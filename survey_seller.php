@@ -1166,7 +1166,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-            <h3>90 Days Post Survey</h3>
+            <h3>Business evaluation survey</h3>
             <h4><?php echo "$Title"; ?></h4>
             <p><?php echo "Buyer ID: ".$_GET['RatedBuyerID'].""; ?></p>
           </div>
@@ -1322,7 +1322,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-            <h3>90 Days Post Survey</h3>
+            <h3>Business evaluation survey</h3>
             <h4><?php echo "$Title"; ?></h4>
             <p><?php echo "Buyer ID: ".$_GET['RatedBuyerID'].""; ?></p>
           </div>

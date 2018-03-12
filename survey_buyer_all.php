@@ -1048,7 +1048,7 @@ li[data-type="control_image"] img {
 
 /*__INSPECT_SEPERATOR__*/
 .form-label-left {
-    width : 120px !important;
+    width : 200px !important;
 }
 
 #id_3, #id_4, #id_5 {
@@ -1099,17 +1099,16 @@ li[data-type="control_image"] img {
 </style>
 <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/buttons/form-submit-button-simple_white.css?3.3.4570"/>
 <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.4038" type="text/javascript"></script>
+<script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.5086" type="text/javascript"></script>
 <script type="text/javascript">
-   JotForm.setConditions([{"action":[{"field":"3","visibility":"Show","id":"action_0_1512376564967","isError":false}],"id":"1422326854655","index":"3","link":"Any","priority":"3","terms":[{"field":"1","operator":"equals","value":"Expected To Generated","id":"term_0_1512376564967","isError":false}],"type":"field"},{"action":[{"field":"4","visibility":"Show","id":"action_0_1512376624814","isError":false}],"id":"1422326874994","index":"5","link":"Any","priority":"5","terms":[{"field":"1","operator":"equals","value":"Actual Generated","id":"term_0_1512376624814","isError":false}],"type":"field"}]);
    JotForm.init(function(){
       JotForm.highlightInputs = false;
     /*INIT-END*/
 });
 
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"control_radio"},{"name":"update","qid":"2","text":"Update","type":"control_button"},{"name":"expectedTo","qid":"3","text":"Expected To Generate","type":"control_textbox"},{"name":"nameOf","qid":"4","text":"Actual Generated","type":"control_textbox"},null,null,null,null,null,null,null,{"name":"2Please","qid":"12","text":"2. Please indicated the estimated buying volume to this exhibitor as a result of your PTM2017 participation","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey - BUYER","type":"control_text"}]);
+   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"update","qid":"2","text":"Update","type":"control_button"},null,null,null,null,null,null,null,null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey - BUYER","type":"control_text"},{"name":"clickTo","qid":"17","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},{"name":"clickTo18","qid":"18","text":"2. Please indicated the estimated buying volume to this exhibitor as a result of your PTM2017 participation","type":"control_text"},{"description":"","name":"expectedTo19","qid":"19","subLabel":"US$","text":"Expected To Generate","type":"control_textbox"}]);
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"control_radio"},{"name":"update","qid":"2","text":"Update","type":"control_button"},{"name":"expectedTo","qid":"3","text":"Expected To Generate","type":"control_textbox"},{"name":"nameOf","qid":"4","text":"Actual Generated","type":"control_textbox"},null,null,null,null,null,null,null,{"name":"2Please","qid":"12","text":"2. Please indicated the estimated buying volume to this exhibitor as a result of your PTM2017 participation","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey - BUYER","type":"control_text"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Update","type":"control_button"},null,null,null,null,null,null,null,null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey - BUYER","type":"control_text"},{"name":"clickTo","qid":"17","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},{"name":"clickTo18","qid":"18","text":"2. Please indicated the estimated buying volume to this exhibitor as a result of your PTM2017 participation","type":"control_text"},{"description":"","name":"expectedTo19","qid":"19","subLabel":"US$","text":"Expected To Generate","type":"control_textbox"}]);}, 20); 
 </script>
 
 </head>
@@ -1170,7 +1169,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-           <h3>90 Days Post Survey</h3>
+           <h3>Business evaluation survey</h3>
             <h4><?php echo "$Title"; ?></h4>
           </div>
         </div>
@@ -1184,49 +1183,18 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_radio" id="id_1">
-        <span class="form-required">
-            
-          </span>
-        <div id="cid_1" class="form-input-wide jf-required">
-          <div class="form-single-column" data-component="radio">
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_0" name="q1_input1" value="Expected To Generated" <?php if($answer1!= "") echo "checked"; ?> required="" />
-              <label id="label_input_1_0" for="input_1_0"> <?php echo $storeArray[1]; ?> </label>
-            </span>
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_1" name="q1_input1" value="Actual Generated" <?php if($answer2!= "") echo "checked"; ?> required="" />
-              <label id="label_input_1_1" for="input_1_1"> <?php echo $storeArray[2]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-2 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_3">
-        <label class="form-label form-label-top" id="label_3" for="input_3">
-          Expected To Generate
-          <span class="form-required">
-            *
-          </span>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_19">
+        <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19">
+          <span style="font-weight: normal;">Expected To Generate</span>
         </label>
-        <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_expectedTo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="<?php echo "$answer1"; ?>" placeholder=" " data-component="textbox" required="" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-3 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_4">
-        <label class="form-label form-label-top" id="label_4" for="input_4">
-          Actual Generated
-          <span class="form-required">
-            *
+        <div id="cid_19" class="form-input jf-required">
+          <span class="form-sub-label-container" style="vertical-align:top;">
+            <input type="text" id="input_19" name="q19_expectedTo19" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" required="" />
+            <!-- <label class="form-sub-label" for="input_19" style="min-height:13px;"> US$ </label> -->
           </span>
-        </label>
-        <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_nameOf" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="<?php echo "$answer2"; ?>" placeholder=" " data-component="textbox" required="" />
         </div>
       </li>
+     
       <li class="form-line" data-type="control_text" id="id_18">
         <div id="cid_18" class="form-input-wide">
           <div id="text_18" class="form-html" data-component="text">
@@ -1339,7 +1307,7 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"1","qid":"1","text":"1.","type":"co
       <li class="form-line" data-type="control_text" id="id_16">
         <div id="cid_16" class="form-input-wide">
           <div id="text_16" class="form-html" data-component="text">
-           <h3>90 Days Post Survey</h3>
+           <h3>Business evaluation survey</h3>
             <h4><?php echo "$Title"; ?></h4>
           </div>
         </div>
