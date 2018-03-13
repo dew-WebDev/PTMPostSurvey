@@ -1047,7 +1047,7 @@ li[data-type="control_image"] img {
 
 /*__INSPECT_SEPERATOR__*/
 .form-label-left {
-    width : 200px !important;
+    width : 64px !important;
 }
 
 #id_3, #id_4, #id_5 {
@@ -1093,6 +1093,18 @@ li[data-type="control_image"] img {
     margin-top : -17px;
 }
 
+#label_30 {
+    margin-left: 40px;
+    margin-bottom: -50px;
+    margin-top: 5px;
+}
+
+#label_24 {
+   
+    margin-top: 2px;
+}
+
+
 
     /* Injected CSS Code */
 </style>
@@ -1106,9 +1118,9 @@ li[data-type="control_image"] img {
     /*INIT-END*/
 });
 
-   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"save","qid":"2","text":"Save","type":"control_button"},null,null,null,null,null,null,{"name":"clickTo","qid":"9","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey -&nbsp;SELLER","type":"control_text"},null,null,{"description":"","name":"2Does","qid":"19","text":"","type":"control_radio"},{"name":"clickTo20","qid":"20","text":"2. Does your company expect any orders over the next 6-12 months?","type":"control_text"},{"name":"clickTo21","qid":"21","text":"3. Please indicate the Estimated Sales Value received as a result of exhibiting at PTM2017","type":"control_text"},{"description":"","name":"expectedTo","qid":"22","subLabel":"","text":"Expected To Generate","type":"control_textbox"}]);
+   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"save","qid":"2","text":"Save","type":"control_button"},null,null,null,null,null,null,{"name":"clickTo","qid":"9","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey -&nbsp;SELLER","type":"control_text"},null,null,{"description":"","name":"2Does","qid":"19","text":"","type":"control_radio"},{"name":"clickTo20","qid":"20","text":"2. Does your company expect any orders over the next 6-12 months?","type":"control_text"},{"name":"clickTo21","qid":"21","text":"3. Please indicate the Estimated Sales Value received as a result of exhibiting at PTM2017","type":"control_text"},{"description":"","name":"generate","qid":"22","subLabel":"","text":"Generate","type":"control_textbox"},{"name":"clickTo23","qid":"23","text":"leads. (for example 5 leads)","type":"control_text"},{"description":"","name":"number","qid":"24","subLabel":"","text":"Number","type":"control_number"}]);
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save","type":"control_button"},null,null,null,null,null,null,{"name":"clickTo","qid":"9","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey -&nbsp;SELLER","type":"control_text"},null,null,{"description":"","name":"2Does","qid":"19","text":"","type":"control_radio"},{"name":"clickTo20","qid":"20","text":"2. Does your company expect any orders over the next 6-12 months?","type":"control_text"},{"name":"clickTo21","qid":"21","text":"3. Please indicate the Estimated Sales Value received as a result of exhibiting at PTM2017","type":"control_text"},{"description":"","name":"expectedTo","qid":"22","subLabel":"","text":"Expected To Generate","type":"control_textbox"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save","type":"control_button"},null,null,null,null,null,null,{"name":"clickTo","qid":"9","text":"1. Approximately, how many business leads did you expect to generate and how many were actually generated from PTM2017 participation?","type":"control_text"},null,null,{"description":"","name":"input12","qid":"12","text":"","type":"control_radio"},null,null,null,{"name":"clickTo16","qid":"16","text":"Post-event survey -&nbsp;SELLER","type":"control_text"},null,null,{"description":"","name":"2Does","qid":"19","text":"","type":"control_radio"},{"name":"clickTo20","qid":"20","text":"2. Does your company expect any orders over the next 6-12 months?","type":"control_text"},{"name":"clickTo21","qid":"21","text":"3. Please indicate the Estimated Sales Value received as a result of exhibiting at PTM2017","type":"control_text"},{"description":"","name":"generate","qid":"22","subLabel":"","text":"Generate","type":"control_textbox"},{"name":"clickTo23","qid":"23","text":"leads. (for example 5 leads)","type":"control_text"},{"description":"","name":"number","qid":"24","subLabel":"","text":"Number","type":"control_number"}]);}, 20); 
 </script>
 </head>
 <body>
@@ -1158,7 +1170,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
                             $answer9 = $answer_seller_row['Ans9'];
                             $answer10 = $answer_seller_row['Ans10'];
                             $answer11 = $answer_seller_row['Ans11'];
-                            $answer12 = $answer_seller_row['Ans12'];
+                            
 
 
         
@@ -1189,22 +1201,28 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
           </div>
         </div>
       </li>
-     <li class="form-line jf-required" data-type="control_textbox" id="id_19">
-        <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19">
-          <span style="font-weight: normal;">Expected To Generate</span>
+     <li class="form-line" data-type="control_number" id="id_24">
+        <label class="form-label form-label-left form-label-auto" id="label_24" for="input_24">
+          <span style="font-weight: normal;"><?php echo $storeArray[1]; ?></span>
         </label>
-        <div id="cid_19" class="form-input jf-required">
-          <span class="form-sub-label-container" style="vertical-align:top;">
-            <input type="text" id="input_19" name="q19_expectedTo19" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" required="" />
-            
-          </span>
+       
+          <div id="cid_24" class="form-input jf-required"">
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="<?php echo "$answer1"; ?>" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+
+          <label class="form-label form-label-auto" id="label_30" for="input_24">
+          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
+        </label>
+ 
         </div>
+
       </li>
+
+
      
       <li class="form-line" data-type="control_text" id="id_20">
         <div id="cid_20" class="form-input-wide">
           <div id="text_20" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
+            <p><strong><?php echo $storeArray[2]; ?></strong><span class="form-required">
             *
           </span></p>
           </div>
@@ -1219,26 +1237,26 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_2Does" value="Definitely “Yes”" <?php if($answer3!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_0" for="input_19_0"> <?php echo $storeArray[4]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_2Does" value="Definitely “Yes”" <?php if($answer2!= "") echo "checked"; ?> required="" />
+              <label id="label_input_19_0" for="input_19_0"> <?php echo $storeArray[3]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_2Does" value="Probably “Yes”" <?php if($answer4!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_1" for="input_19_1"> <?php echo $storeArray[5]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_2Does" value="Probably “Yes”" <?php if($answer3!= "") echo "checked"; ?> required="" />
+              <label id="label_input_19_1" for="input_19_1"> <?php echo $storeArray[4]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_2" name="q19_2Does" value="Probably “No”" <?php if($answer5!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_2" for="input_19_2"> <?php echo $storeArray[6]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_2" name="q19_2Does" value="Probably “No”" <?php if($answer4!= "") echo "checked"; ?> required="" />
+              <label id="label_input_19_2" for="input_19_2"> <?php echo $storeArray[5]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_19_3" name="q19_2Does" value="Definitely “No”" <?php if($answer6!= "") echo "checked"; ?> required="" />
-              <label id="label_input_19_3" for="input_19_3"> <?php echo $storeArray[7]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_19_3" name="q19_2Does" value="Definitely “No”" <?php if($answer5!= "") echo "checked"; ?> required="" />
+              <label id="label_input_19_3" for="input_19_3"> <?php echo $storeArray[6]; ?> </label>
             </span>
           </div>
         </div>
@@ -1246,7 +1264,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_21">
         <div id="cid_21" class="form-input-wide">
           <div id="text_21" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[8]; ?></strong><span class="form-required">
+            <p><strong><?php echo $storeArray[7]; ?></strong><span class="form-required">
             *
           </span></p>
           </div>
@@ -1261,38 +1279,38 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_input12" value="Under US$50,000" <?php if($answer7!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[9]; ?></label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_input12" value="Under US$50,000" <?php if($answer6!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[8]; ?></label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_input12" value="Between US$50,001- US$250,000" <?php if($answer8!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[10]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_input12" value="Between US$50,001- US$250,000" <?php if($answer7!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[9]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_input12" value="Between US$250,001- US$500,000" <?php if($answer9!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[11]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_input12" value="Between US$250,001- US$500,000" <?php if($answer8!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[10]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_input12" value="Between US$500,001 - US$ 750,000" <?php if($answer10!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[12]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_input12" value="Between US$500,001 - US$ 750,000" <?php if($answer9!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[11]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_input12" value="Between US$750,001 US$1,000,000" <?php if($answer11!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[13]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_input12" value="Between US$750,001 US$1,000,000" <?php if($answer10!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[12]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_input12" value="Above USD$1,000,000" <?php if($answer12!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[14]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_input12" value="Above USD$1,000,000" <?php if($answer11!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[13]; ?> </label>
             </span>
           </div>
         </div>
@@ -1368,53 +1386,26 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_radio" id="id_1">
-        <label class="form-label form-label-top" id="label_1" for="input_1">
-          
+      <li class="form-line" data-type="control_number" id="id_24">
+        <label class="form-label form-label-left form-label-auto" id="label_24" for="input_24">
+          <span style="font-weight: normal;"><?php echo $storeArray[1]; ?></span>
         </label>
-        <div id="cid_1" class="form-input-wide jf-required">
-          <div class="form-single-column" data-component="radio">
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_0" name="q1_input1" value="Expected To Generated" required="" />
-              <label id="label_input_1_0" for="input_1_0"> <?php echo $storeArray[1]; ?> </label>
-            </span>
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_1" name="q1_input1" value="Actual Generated" required="" />
-              <label id="label_input_1_1" for="input_1_1"> <?php echo $storeArray[2]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-2 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_3">
-        <label class="form-label form-label-top" id="label_3" for="input_3">
-          Expected To Generate
-          <span class="form-required">
-            *
-          </span>
+       
+          <div id="cid_24" class="form-input jf-required"">
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+
+          <label class="form-label form-label-auto" id="label_30" for="input_24">
+          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
         </label>
-        <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_expectedTo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
+ 
         </div>
+
       </li>
-      <li class="form-line form-line-column form-col-3 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_4">
-        <label class="form-label form-label-top" id="label_4" for="input_4">
-          Actual Generated
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_nameOf" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
-        </div>
-      </li>
+
       <li class="form-line" data-type="control_text" id="id_20">
         <div id="cid_20" class="form-input-wide">
           <div id="text_20" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
+            <p><strong><?php echo $storeArray[2]; ?></strong><span class="form-required">
             *
           </span></p>
           </div>
@@ -1430,25 +1421,25 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_19_0" name="q19_2Does" value="Definitely “Yes”" required="" />
-              <label id="label_input_19_0" for="input_19_0"> <?php echo $storeArray[4]; ?> </label>
+              <label id="label_input_19_0" for="input_19_0"> <?php echo $storeArray[3]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_19_1" name="q19_2Does" value="Probably “Yes”" required="" />
-              <label id="label_input_19_1" for="input_19_1"> <?php echo $storeArray[5]; ?> </label>
+              <label id="label_input_19_1" for="input_19_1"> <?php echo $storeArray[4]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_19_2" name="q19_2Does" value="Probably “No”" required="" />
-              <label id="label_input_19_2" for="input_19_2"> <?php echo $storeArray[6]; ?> </label>
+              <label id="label_input_19_2" for="input_19_2"> <?php echo $storeArray[5]; ?> </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_19_3" name="q19_2Does" value="Definitely “No”" required="" />
-              <label id="label_input_19_3" for="input_19_3"> <?php echo $storeArray[7]; ?> </label>
+              <label id="label_input_19_3" for="input_19_3"> <?php echo $storeArray[6]; ?> </label>
             </span>
           </div>
         </div>
@@ -1456,7 +1447,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
       <li class="form-line" data-type="control_text" id="id_21">
         <div id="cid_21" class="form-input-wide">
           <div id="text_21" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[8]; ?></strong><span class="form-required">
+            <p><strong><?php echo $storeArray[7]; ?></strong><span class="form-required">
             *
           </span></p>
           </div>
@@ -1472,37 +1463,37 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_input12" value="Under US$50,000" required="" />
-              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[9]; ?></label>
+              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[8]; ?></label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_input12" value="Between US$50,001- US$250,000" required="" />
-              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[10]; ?> </label>
+              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[9]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_input12" value="Between US$250,001- US$500,000" required="" />
-              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[11]; ?> </label>
+              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[10]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_input12" value="Between US$500,001 - US$ 750,000" required="" />
-              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[12]; ?> </label>
+              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[11]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_input12" value="Between US$750,001 US$1,000,000" required="" />
-              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[13]; ?> </label>
+              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[12]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_input12" value="Above USD$1,000,000" required="" />
-              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[14]; ?> </label>
+              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[13]; ?> </label>
             </span>
           </div>
         </div>

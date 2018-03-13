@@ -807,6 +807,7 @@ li[data-type="control_image"] img {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
   }
   span.form-sub-label-container + span.form-sub-label-container {
     margin-right: 0;
@@ -1048,7 +1049,7 @@ li[data-type="control_image"] img {
 
 /*__INSPECT_SEPERATOR__*/
 .form-label-left {
-    width : 200px !important;
+    width : 64px !important;
 }
 
 #id_3, #id_4, #id_5 {
@@ -1093,6 +1094,19 @@ li[data-type="control_image"] img {
     margin-left : 19px;
     margin-top : -17px;
 }
+
+#label_30 {
+    margin-left: 40px;
+    margin-bottom: -50px;
+    margin-top: 5px;
+}
+
+#label_24 {
+   
+    margin-top: 2px;
+}
+
+
 
 
     /* Injected CSS Code */
@@ -1156,7 +1170,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
         										$answer5 = $answer_buyer_row['Ans5'];
         										$answer6 = $answer_buyer_row['Ans6'];
         										$answer7 = $answer_buyer_row['Ans7'];
-        										$answer8 = $answer_buyer_row['Ans8'];
+        										
 
 
 							?>
@@ -1183,22 +1197,26 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
           </div>
         </div>
       </li>
-      <li class="form-line jf-required" data-type="control_textbox" id="id_19">
-        <label class="form-label form-label-left form-label-auto" id="label_19" for="input_19">
-          <span style="font-weight: normal;">Expected To Generate</span>
+     <li class="form-line" data-type="control_number" id="id_24">
+        <label class="form-label form-label-left form-label-auto" id="label_24" for="input_24">
+          <span style="font-weight: normal;"><?php echo $storeArray[1]; ?></span>
         </label>
-        <div id="cid_19" class="form-input jf-required">
-          <span class="form-sub-label-container" style="vertical-align:top;">
-            <input type="text" id="input_19" name="q19_expectedTo19" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" data-component="textbox" required="" />
-            <!-- <label class="form-sub-label" for="input_19" style="min-height:13px;"> US$ </label> -->
-          </span>
+       
+          <div id="cid_24" class="form-input jf-required"">
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="<?php echo "$answer1"; ?>" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+
+          <label class="form-label form-label-auto" id="label_30" for="input_24">
+          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
+        </label>
+ 
         </div>
+
       </li>
      
       <li class="form-line" data-type="control_text" id="id_18">
         <div id="cid_18" class="form-input-wide">
           <div id="text_18" class="form-html" data-component="text">
-            <strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
+            <strong><?php echo $storeArray[2]; ?></strong><span class="form-required">
             *
           </span>
           </div>
@@ -1213,38 +1231,38 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_2Please" value="Under US$50,000" <?php if($answer3!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[4]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_2Please" value="Under US$50,000" <?php if($answer2!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[3]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_2Please" value="Between US$50,001- US$250,000" <?php if($answer4!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[5]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_2Please" value="Between US$50,001- US$250,000" <?php if($answer3!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[4]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_2Please" value="Between US$250,001- US$500,000" <?php if($answer5!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[6]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_2Please" value="Between US$250,001- US$500,000" <?php if($answer4!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[5]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_2Please" value="Between US$500,001 - US$ 750,000" <?php if($answer6!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[7]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_2Please" value="Between US$500,001 - US$ 750,000" <?php if($answer5!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[6]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_2Please" value="Between US$750,001 US$1,000,000" <?php if($answer7!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[8]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_2Please" value="Between US$750,001 US$1,000,000" <?php if($answer6!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[7]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
-              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_2Please" value="Above USD$1,000,000" <?php if($answer8!= "") echo "checked"; ?> required="" />
-              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[9]; ?> </label>
+              <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_2Please" value="Above USD$1,000,000" <?php if($answer7!= "") echo "checked"; ?> required="" />
+              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[8]; ?> </label>
             </span>
           </div>
         </div>
@@ -1321,53 +1339,25 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_radio" id="id_1">
-        <span class="form-required">
-            
-          </span>
-        <div id="cid_1" class="form-input-wide jf-required">
-          <div class="form-single-column" data-component="radio">
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_0" name="q1_input1" value="Expected To Generated" required="" />
-              <label id="label_input_1_0" for="input_1_0"> <?php echo $storeArray[1]; ?> </label>
-            </span>
-            <span class="form-radio-item" style="clear:left;">
-              <span class="dragger-item">
-              </span>
-              <input type="radio" class="form-radio validate[required]" id="input_1_1" name="q1_input1" value="Actual Generated" required="" />
-              <label id="label_input_1_1" for="input_1_1"> <?php echo $storeArray[2]; ?> </label>
-            </span>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-2 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_3">
-        <label class="form-label form-label-top" id="label_3" for="input_3">
-          Expected To Generate
-          <span class="form-required">
-            *
-          </span>
+      <li class="form-line" data-type="control_number" id="id_24">
+        <label class="form-label form-label-left form-label-auto" id="label_24" for="input_24">
+          <span style="font-weight: normal;"><?php echo $storeArray[1]; ?></span>
         </label>
-        <div id="cid_3" class="form-input-wide jf-required">
-          <input type="text" id="input_3" name="q3_expectedTo" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-3 jf-required form-field-hidden" style="display:none;" data-type="control_textbox" id="id_4">
-        <label class="form-label form-label-top" id="label_4" for="input_4">
-          Actual Generated
-          <span class="form-required">
-            *
-          </span>
+       
+          <div id="cid_24" class="form-input jf-required"">
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+
+          <label class="form-label form-label-auto" id="label_30" for="input_24">
+          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
         </label>
-        <div id="cid_4" class="form-input-wide jf-required">
-          <input type="text" id="input_4" name="q4_nameOf" data-type="input-textbox" class="form-textbox validate[required]" size="20" value="" placeholder=" " data-component="textbox" required="" />
+ 
         </div>
+
       </li>
       <li class="form-line" data-type="control_text" id="id_18">
         <div id="cid_18" class="form-input-wide">
           <div id="text_18" class="form-html" data-component="text">
-            <p><strong><?php echo $storeArray[3]; ?></strong><span class="form-required">
+            <p><strong><?php echo $storeArray[2]; ?></strong><span class="form-required">
             *
           </span></p>
           </div>
@@ -1383,37 +1373,37 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_0" name="q12_2Please" value="Under US$50,000" required="" />
-              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[4]; ?> </label>
+              <label id="label_input_12_0" for="input_12_0"> <?php echo $storeArray[3]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_1" name="q12_2Please" value="Between US$50,001- US$250,000" required="" />
-              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[5]; ?> </label>
+              <label id="label_input_12_1" for="input_12_1"> <?php echo $storeArray[4]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_2" name="q12_2Please" value="Between US$250,001- US$500,000" required="" />
-              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[6]; ?> </label>
+              <label id="label_input_12_2" for="input_12_2"> <?php echo $storeArray[5]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_3" name="q12_2Please" value="Between US$500,001 - US$ 750,000" required="" />
-              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[7]; ?> </label>
+              <label id="label_input_12_3" for="input_12_3"> <?php echo $storeArray[6]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_4" name="q12_2Please" value="Between US$750,001 US$1,000,000" required="" />
-              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[8]; ?> </label>
+              <label id="label_input_12_4" for="input_12_4"> <?php echo $storeArray[7]; ?> </label>
             </span>
             <span class="form-radio-item" style="clear:left;">
               <span class="dragger-item">
               </span>
               <input type="radio" class="form-radio validate[required]" id="input_12_5" name="q12_2Please" value="Above USD$1,000,000" required="" />
-              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[9]; ?> </label>
+              <label id="label_input_12_5" for="input_12_5"> <?php echo $storeArray[8]; ?> </label>
             </span>
           </div>
         </div>
@@ -1427,7 +1417,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"update","qid":"2","text":"Upda
             <span>
             </span>
           
-            <input type="button" value="Close this window" onclick="self.close()" class="cancelbutton" style="text-decoration: none; padding:8px 18px;color: #777777;text-shadow:1px 1px 0px #ffffff;">
+            <input type="button" value="Cancel" onclick="self.close()" class="cancelbutton" style="text-decoration: none; padding:8px 18px;color: #777777;text-shadow:1px 1px 0px #ffffff;">
             
           </div>
         </div>

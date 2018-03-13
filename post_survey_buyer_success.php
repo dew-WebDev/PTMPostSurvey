@@ -16,6 +16,7 @@
 function windowClose() {
 window.open('','_parent','');
 window.close();
+window.opener.location.reload();
 }
 </script>
 </head>
