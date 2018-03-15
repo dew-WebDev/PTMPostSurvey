@@ -1047,7 +1047,7 @@ li[data-type="control_image"] img {
 
 /*__INSPECT_SEPERATOR__*/
 .form-label-left {
-    width : 64px !important;
+    width : 112px !important;
 }
 
 #id_3, #id_4, #id_5 {
@@ -1207,11 +1207,12 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
         </label>
        
           <div id="cid_24" class="form-input jf-required"">
-                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="<?php echo "$answer1"; ?>" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
-
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class="form-number-input form-textbox validate[required]" style="width:36px;" size="2" value="<?php echo "$answer1"; ?>" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+          <!--           
           <label class="form-label form-label-auto" id="label_30" for="input_24">
-          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
+          <span style="font-weight: normal;font-size:12px;">leads.</span>
         </label>
+        -->
  
         </div>
 
@@ -1392,11 +1393,13 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"save","qid":"2","text":"Save",
         </label>
        
           <div id="cid_24" class="form-input jf-required"">
-                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class=" form-number-input form-textbox" style="width:36px;" size="2" value="" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
+                    <input type="number" id="input_24" name="q24_number" data-type="input-number" class="form-number-input form-textbox validate[required]" style="width:36px;" size="2" value="" data-numbermin="0" data-numbermax="30" data-component="number" maxlength="2" />
 
+           <!--           
           <label class="form-label form-label-auto" id="label_30" for="input_24">
-          <span style="font-weight: normal;font-size:12px;">leads. (for example 5 leads)</span>
+          <span style="font-weight: normal;font-size:12px;">leads.</span>
         </label>
+        -->
  
         </div>
 
